@@ -22,11 +22,11 @@ class Topology(Topo):
         # Add links into topology
 	# [TODO] Add contraints(bw, delay, loss)
         self.addLink(s2, h1, port1=1, port2=1)
-        self.addLink(s1, s3, port1=2, port2=2)
-        self.addLink(s1, s4, port1=1, port2=2)
-        self.addLink(s2, s3, port1=3, port2=3)
-        self.addLink(s2, s4, port1=2, port2=3)
-        self.addLink(s3, s4, port1=1, port2=4)
+        self.addLink(s1, s3, port1=2, port2=2, bw=30, delay=1, loss=1)
+        self.addLink(s1, s4, port1=1, port2=2, bw=20, delay=2, loss=1)
+        self.addLink(s2, s3, port1=3, port2=3, bw=20, delay=2, loss=1)
+        self.addLink(s2, s4, port1=2, port2=3, bw=8, delay=10, loss=6)
+        self.addLink(s3, s4, port1=1, port2=4, bw=2, delay=12, loss=8)
         self.addLink(s4, h2, port1=1, port2=1)
 	      
 
